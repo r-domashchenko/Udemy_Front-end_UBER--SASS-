@@ -1,0 +1,424 @@
+body
+	min-width: 100%
+
+nav
+	z-index: 10
+	position: fixed
+	width: 100%
+	height: 50px
+	background: #212121
+
+.hamburger
+	display: none	
+
+.menu
+	display: flex
+	justify-content: space-between
+	padding: 12px 50px
+	margin: 0
+	list-style-type: none
+
+	&_link
+		font-weight: 300
+		font-size: 15px
+		color: #ffffff
+		&:hover
+			text-decoration: none
+			color: $main-color
+
+	&_item
+		border-right: 2px dotted black
+		padding-right: 28px
+		&:last-child
+			border-right: none
+
+.subheader
+	position: absolute
+	margin-top: 50px
+	width: 100%
+	height: 85px
+	background-color: rgba(0, 0, 0, 0.6)
+	z-index: 4
+
+	&_logo
+		display: block
+		margin-top: 16px
+
+	&_official
+		margin-top: 5px
+		font-size: 13px
+		font-weight: 300
+		color: white
+
+	&_call
+		font-weight: 300
+		font-size: 12px
+		line-height: 14px
+		color: white
+		margin-top: 20px
+		text-align: right
+
+	&_phone
+		display: block
+		font-size: 22px
+		text-transform: uppercase
+		text-align: right
+		color: white
+		margin-top: 8px
+
+	&_btn
+		width: 172px
+		height: 46px
+		background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 4px
+		margin-top: 20px
+		border: none
+		font-size: 14px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+		@include btn_hover
+
+.promo
+	min-height: 800px
+	background: url('../img/1-main/uber_main_bg.jpg') center (center / cover) no-repeat
+
+	&_header
+		margin: 0
+		margin-top: 200px
+		line-height: 60px
+		font-weight: 900
+		font-size: 60px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+
+	&_subheader
+		margin-top: 25px
+		margin-bottom: 0
+		line-height: 36px
+		font-weight: 700
+		font-size: 36px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+
+	&_text
+		margin-top: 25px
+		margin-bottom: 0
+		font-weight: 400
+		font-size: 18px
+		line-height: 24px
+		text-align: center
+		color: #FFFFFF
+
+	&_btn
+		display: block
+		margin: auto
+		margin-top: 115px
+		width: 259px
+		height: 63px
+		background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+		box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12)
+		border-radius: 4px
+		border: none
+		font-weight: 400
+		font-size: 18px
+		text-align: center
+		text-transform: uppercase
+		color: #FFFFFF
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+		@include btn_hover
+
+.block_header
+	@include title1
+
+.block_header_2
+	@include title2
+
+.benefits
+	padding: 50px 0
+	&_block
+		display: flex
+		justify-content: space-between
+		min-height: 100%
+		margin-top: 30px
+
+	&_icon
+		display: flex
+		justify-content: center
+		min-width: 116px
+		min-height: 116px
+		background: #1EACC7
+		border-radius: 100%
+		margin: auto 0
+
+		.icon
+			max-width: 70%
+
+	&_text_block
+		margin: 15px 0 auto 25px
+
+	&_text_header
+		font-weight: 400
+		font-size: 17px
+		line-height: 21px
+		color: #1EACC7
+
+	&_text_prg
+		font-size: 15px
+		line-height: 21px
+		color: #202020
+
+.block_header_3
+	@include title3
+
+.opportunity
+	padding: 50px 0 80px 0
+	min-height: 864px
+	background: url("../img/3-opportunities/oportunities-bg.svg") center (center / cover) repeat
+	.row
+		margin-top: 30px
+	&_item
+		width: 320px
+		height: 280px
+		margin: 0px auto 20px auto
+		position: relative
+		&_1
+			background: url("../img/3-opportunities/card-1.jpg") center (center / cover) no-repeat
+		&_2
+			background: url("../img/3-opportunities/card-2.jpg") center (center / cover) no-repeat
+		&_3
+			background: url("../img/3-opportunities/card-3.jpg") center (center / cover) no-repeat
+		&_4
+			background: url("../img/3-opportunities/card-4.jpg") center (center / cover) no-repeat
+		&_5
+			background: url("../img/3-opportunities/card-5.jpg") center (center / cover) no-repeat
+		&_6
+			background: url("../img/3-opportunities/card-6.jpg") center (center / cover) no-repeat
+		&_subtitle
+			font-size: 24px
+			line-height: 24px
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
+			padding-top: 80px
+		&_plus
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: 35px
+			width: 29px
+			height: 29px
+			background-color: black
+			margin: 0 auto
+			border-radius: 100%
+			cursor: pointer
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $main-color
+				transition: 0.5s all
+
+			&:after
+				content: ''
+				position: absolute
+				display: block
+				width: 2px
+				height: 14px
+				background-color: $main-color
+				left: 50%
+				transform: translateX(-50%)
+				transition: 0.5s all
+
+			&:hover
+				&:before, &:after
+					background-color: $second-color
+
+.opportunity-2
+	min-height: 900px
+	background: url("../img/3-opportunities/oportunities-bg.svg") center (center / cover) repeat
+	padding-top: 60px
+	position: relative
+
+	&_uber-car
+		position: relative
+		display: block
+		margin: 55px auto 0 auto
+		z-index: 1
+
+	&_text-descr
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		text-align: center
+		color: #222222
+
+	.black
+		position: absolute
+		top: 0
+		left: 0
+		height: 500px
+		width: 100%
+		background-color: #070716
+		z-index: 0
+
+.block_header-wt
+	@include title1-wt
+	position: relative
+.block_header_2-wt
+	@include title2-wt
+	position: relative
+.block_header_3-wt
+	@include title3-wt
+	position: relative
+
+.require
+	padding: 30px 0
+	&_block
+		margin: 30px 0
+	&_title
+		font-weight: 400
+		font-size: 22px
+		line-height: 24px
+		color: #1CA8C3
+	&_list
+		position: relative
+		margin-top: 20px
+		list-style-type: none
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		color: #222222
+		padding-left: 50px
+		li
+			margin-bottom: 10px
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 10px
+				width: 22px
+				height: 20px
+				background: url('../icons/oportunities-check/check_blue.svg') center (center / cover) no-repeat
+	&_descr
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		color: #1CA8C3
+		margin-top: 25px
+
+	.warning
+		.require_title
+			color: $second-color
+		.require_list
+			color: #222222
+			li
+				&:before
+					background: url('../icons/oportunities-check/check_red.svg') center (center / cover) no-repeat
+
+.map
+	background-color: #080816
+	&_bcgnd
+		background: url('../img/5-cities/world_bg.svg') center center/cover no-repeat
+		padding: 45px 0
+	&_btn
+		display: block
+		font-weight: 400
+		font-size: 15px
+		text-align: center
+		text-transform: uppercase
+		color: $main-color
+		transition: 0.5s all
+		margin-top: 440px
+		&:hover
+			color: $second-color
+
+.footer
+	padding: 30px 0
+	position: relative
+	display: flex
+	justify-content: center
+	flex-direction: column
+	&_line
+		display: block
+		margin: 0 auto
+		width: 30%
+		height: 5px
+		background: $main-color
+
+	&_block-main
+		display: flex
+		width: 368px
+		justify-content: space-between
+		margin: 25px auto 0 auto
+		&_btn
+			font-weight: 300
+			font-size: 15px
+			text-transform: uppercase
+			color: #070716
+
+	&_block-second
+		display: flex
+		justify-content: space-between
+		width: 400px
+		margin: 10px auto 0 auto
+		&_btn
+			font-weight: 300
+			font-size: 11px
+			text-transform: uppercase
+			color: #999999
+
+	&_language-btn
+		display: block
+		margin: 10px auto 0 auto
+		text-align: center
+		font-weight: 400
+		font-size: 11px
+		text-transform: uppercase
+		color: $main-color
+
+	&_block-left
+		display: flex
+		position: absolute
+		left: 20px
+		top: 65px
+		&_btn
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 35px
+			width: 35px
+			border-radius: 100%
+			background-color: black
+			margin-right: 5px
+			align-items: center
+			span
+				color: white
+	&_block-right
+		display: flex
+		justify-content: center
+		position: absolute
+		right: 10px
+		top: 65px
+		&_btn
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 35px
+			width: 95px
+			margin-left: 5px
+			border-radius: 10px
+			background-color: black
+			color: white
+			span
+				color: white
+.xs-visible
+	display: none
